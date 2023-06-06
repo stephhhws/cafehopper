@@ -1,0 +1,53 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('IMG_8453.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #eee8e8;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+h3, .nav-link {
+    color: #ddb892;
+    font-family: "Marker Felt", fantasy;
+    font-weight: 300;
+}
+
+.cover-container {
+    max-width: 80vw;
+}
+
+.nav-link {
+    border-bottom: 0.1rem solid transparent;
+    color: #e6ccb2;
+    font-weight: 200;
+}
+
+.nav-link:hover {
+    border-bottom-color:  #e6ccb2;
+    color: #f5f1ec;
+    transform: translateY(-5px);
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.nav-link.active {
+    border-bottom-color: white;
+    color: #7e6350;
+}
+
+.btn-secondary {
+    background-color: #c89f9cf9;
+    box-shadow: inset 0 0 0 0 #c2c5aa;
+    color: #835f5a;
+    line-height: 1.5;
+    padding: 15px;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    box-shadow: inset 500px 0 0 0 #c97c5d;
+    color: #eae0d5;
+}

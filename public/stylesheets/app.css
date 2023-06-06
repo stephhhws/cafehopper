@@ -1,0 +1,141 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'); 
+    background-attachment: fixed;
+    background-size: cover;
+    color: #e6ccb2;
+    font-family:'Quicksand';
+}
+
+#navTitle, .custom-navbar {
+    color: #EFF0EA;
+    font-family: "Marker Felt", sans-serif;
+    font-weight: 200;
+}
+
+.custom-navbar {
+    background-color: #baac9ae3;
+    color: #414833;
+}
+
+.nav-link:hover {
+    border-bottom-color:  #e6ccb2;
+    color: #f5f1ec;
+    transform: translateY(-5px);
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.link {
+    background-color: #8f6c55;
+    border-radius: 5px;
+    color: #e6ccb2; 
+    padding: 5px; 
+    text-decoration: underline;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.link:hover {
+    box-shadow: inset 500px 0 0 0 #c2c5aa;
+    color: #414833;
+}
+
+#Add {
+    padding: 15px 0;
+}
+
+#addCafe {
+    box-shadow: inset 0 0 0 0 #c2c5aa;
+    border-radius: 10px;
+    color: #e7e0c6;
+    font-family: 'Marker Felt', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+#addCafe:hover {
+    box-shadow: inset 500px 0 0 0 #c2c5aa;
+    color: #414833;
+}
+
+#displayCard, #showCard {
+    background-color: #ddd0c8f8;
+    border-radius: 10px;
+    color: #7f4f24; 
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+
+#desciptionCard, .custom-list-item {
+    background-color: #b7b7a4;
+    border-color: #b1b1ade0;
+    color: #22333b;
+}
+
+#desciptionCard h5 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#desciptionCard p {
+    padding: 0px 15px;
+    color: white;
+}
+
+#cardLink {
+    color: #ffffff; 
+    padding: 5px; 
+}
+
+#reviewCard {
+    background-color: #a1b0ad;
+    border: none;
+}
+
+#leaveReview {
+    background-color: #a6aeac;
+    border-color: #a1b0ad;
+    color: #22333b;
+    padding: 10px;
+}
+
+#indexTitle {
+    color: #6b705c;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#cluster-map, #map {
+    height: 200px;
+    width: 100%;
+}
+
+#indexImg, #defaultImg {
+    height: 200px;
+    object-fit: cover;
+    width: 300px;
+}
+
+#titleButton {
+    background-image: -webkit-linear-gradient(30deg, #BF9583 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #BF9583 50%, transparent 50%);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    border: 3px solid #BF9583;
+    color: #fff;
+    -webkit-transition: background 200ms ease-in-out;
+    transition: background 200ms ease-in-out;
+}
+
+#titleButton:hover {
+    background-color: #eed7c5;
+    background-position: 100%;
+    color: #c97c5d;
+}

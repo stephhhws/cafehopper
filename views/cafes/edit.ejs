@@ -1,0 +1,52 @@
+<% layout ("layouts/boilerplate.ejs")%>
+
+<div class="row">
+  <h1 class="text-center">Edit Cafe</h1>
+  <div class="col-6 offset-3">
+      <form action="/cafes/<%=cafe._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+          <div class="mb-3">
+              <label class="form-label" for="title">Title</label>
+              <input type="text" id="title" name="cafe[title]" value="<%= cafe.title %>" class="form-control" required>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="location">Location</label>
+              <input type="text" id="location" name="cafe[location]" value="<%= cafe.location %>" class="form-control" required>
+          </div>
+          <div class="custom-file">
+              <label class="form-label" for="image">Choose Images</label>
+              <input type="file" id="image" name="image" class="form-control" multiple>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="price">Price</label>
+              <div class="input-group">
+                  <input type="text" id="price" name="cafe[price]" placeholder="0.00" aria-label="price" aria-describedby="price-label" value="<%= cafe.price %>" class="form-control" required>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label class="form-label" for="description">Description</label>
+              <textarea type="text" id="description" name="cafe[description]" class="form-control" required><%= cafe.description %></textarea>
+          </div>
+          <h6>Delete Images: </h6>
+          <div class="row row-cols-1 row-cols-md-4 g-4 mb-3">
+              <% cafe.images.forEach((image, i) => { %>
+              <div class="col">
+                  <div class="card">
+                      <label for="image-<%= i %>">
+                          <div class="ratio ratio-1x1">
+                              <img src="<%= image.thumbnail %>" alt="" class="card-img img-fluid">
+                          </div>
+                          <div class="card-img-overlay text-end pt-1 pe-2">
+                              <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= image.filename %>" class="form-check-input">
+                          </div>
+                      </label>
+                  </div>
+              </div>
+              <% }) %>
+          </div>
+          <div class="mb-3">
+              <button class="btn btn-secondary">Update Cafe!</button>
+          </div>
+      </form>
+      <a href="/cafes/<%= cafe._id %>" class="link">Back to cafe</a>
+  </div>
+</div>

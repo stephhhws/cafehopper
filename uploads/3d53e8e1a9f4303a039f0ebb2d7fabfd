@@ -1,0 +1,28 @@
+def isValid(s: str) -> bool:
+    stack = []
+    # Create a hash map to the matching parentheses
+    closeToOpen= {")":"(", "]": "[", "}":"{"}
+
+    for c in s:
+        # If it is a closing parentheses (key is a closing parentheses)
+        if c in closeToOpen:
+        # Make sure the stack is not empty
+        # Make sure the last value we added to stack is matching 
+        # closeToOpen[c]: get the opening 
+            if stack and stack[-1] == closeToOpen[c]:
+                #if they match, pops out from stack
+                stack.pop()
+            else:
+            # parentheses don't match
+                return False
+        # If it is a opening parentheses
+        else:
+            stack.append(c)
+    # If it is empty 
+    if not stack:
+        return True
+    # If it contains something
+    else:
+        False
+
+

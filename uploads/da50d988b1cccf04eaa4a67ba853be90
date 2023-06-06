@@ -1,0 +1,47 @@
+import collections
+def longestCommonPrefix(strs):
+    '''
+    # My incorrect solution
+    firstword = []
+    for i in strs[0]:
+        firstword.append(i)
+    result= firstword[:]
+
+    
+    for word in range(1, len(strs)):
+        for index in range(len(firstword)):
+            if index > len(strs[word])-1:
+                break
+            else:
+                if strs[word][index] != firstword[index]:
+                    if len(result) != 0:
+                        result.remove(firstword[index])
+    print(result)
+    '''
+
+    result = ""
+    # loop through each character in the first word 
+    for i in range(len(strs[0])):
+        #for each character in the first word, loop the string !
+        print("the index is", i)
+        for s in strs:
+            print("s is ", s)
+        # i == lens(s) prevent the problem of index out of range 
+        # e.g. the first word is 6 characters, the second word is 4 characters
+        # so when the index loop till i= 4, immediately end the for loop and return the result 
+        # or when we see the character in first word is not the same as the word we are looping,
+        # end the loop and return the result
+            print("character in firstword is", strs[0][i])
+            print("character in the loop is", s[i])
+            if i == len(s) or strs[0][i] != s[i]:
+                return result
+        # After comparing the word which are not the same, the identical word would be added to result
+        result += strs[0][i]
+        print(result)
+    return result
+      
+
+
+
+
+print(longestCommonPrefix(["dog","racecar","car"]))

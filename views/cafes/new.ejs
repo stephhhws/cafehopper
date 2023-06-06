@@ -1,0 +1,35 @@
+<% layout ("layouts/boilerplate.ejs")%>
+
+<div class="row">
+    <h1 class="text-center">New Cafe</h1>
+    <div class="col-6 offset-3">
+        <form action="/cafes" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" id="title" name="cafe[title]" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input type="text" id="location" name="cafe[location]" class="form-control" required>
+            </div>
+            <div class="custom-file">
+                <label class="form-label" for="image">Choose Images</label>
+                <input type="file" id="image" name="image" class="form-control" multiple>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group">
+                    <input type="text" id="price" name="cafe[price]" placeholder="$ / $$ / $$$" aria-label="price" aria-describedby="price-label" class="form-control" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea type="text" id="description" name="cafe[description]" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-secondary">Add Cafe!</button>
+            </div>
+        </form>
+        <a href="/cafes" class="link">Browse All Cafes</a>
+    </div>
+</div>
