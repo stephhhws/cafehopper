@@ -159,7 +159,7 @@ app.use("/cafes/:id/reviews", reviewsRoute)
 app.use("/", userRoutes)
 
 app.get("/", (req, res) => {
-    res.render("Home")
+    res.render("home")
 })
 
 // Error handling
